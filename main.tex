@@ -1,0 +1,113 @@
+%-------------------------
+% Rover Resume - Base Template
+% Link: https://github.com/subidit/rover-resume
+%------------------------
+\documentclass[10pt]{article} % fontsize 10pt/11pt/12pt
+\usepackage[margin=0.5in, a4paper]{geometry}
+\usepackage[T1]{fontenc}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[hidelinks]{hyperref}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\titlespacing{\section}{0pt}{*1}{*0.5}
+\pdfgentounicode=1
+\begin{document}
+\begin{center}
+	\begin{minipage}{0.58\textwidth}
+		{\huge\bfseries
+			Maximilian L. Schulten
+		} \\ \medskip
+		AI/ML Engineer \& Researcher
+	\end{minipage} \hfill
+	\begin{minipage}{0.38\textwidth}
+		\raggedleft
+		Email: maximilian.schulten1@gmail.com \\
+		Mobile: +1 (513) 446-8426 \\
+		Web: \href{https://max-schulten.com}{max-schulten.com} \\
+		GitHub: \href{https://github.com/max-schulten}{github.com/max-schulten} \\
+		LinkedIn: \href{https://www.linkedin.com/in/maximilian-schulten-b78099271/}{linkedin.com/in/maximilian-schulten}
+	\end{minipage}
+\end{center}
+
+\section{Education}
+%=================%
+\subsection{Case Western Reserve University \hfill Cleveland, OH}
+\subsection{\normalfont\itshape M.S./B.S. Computer Science, B.S. Mathematics \hfill 08/2022 -- Present (Exp. Spring '27)}
+\begin{itemize}
+	\item Integrated B.S./M.S. Candidate
+	\item Cumulative GPA: 3.91, Dean's High Honor List (all semesters)
+	\item Teaching assistant for CSDS 302 (Discrete Math) \& CSDS 101 (Comp. Sci. and Data Sci. for all)
+	\item Member of Dr. Sumon Biswas' reSAID Lab -- LLM-generated code security evaluation; knowledge distillation for SWE tasks
+\end{itemize}
+
+\section{Experience}
+%=================%
+\subsection{Medpace, Inc \hfill Cincinnati, OH}
+\subsubsection{Clinical Informatics Intern \hfill 05/2026 -- 08/2026}
+\begin{itemize}
+	\item Built an asynchronous R Shiny order portal using the Microsoft Graph REST API, using optimistic UI updates to keep the interface responsive under concurrent load
+	\begin{itemize}
+		\item Served $\approx 50$ orders per week across 200+ daily sessions, available company-wide
+	\end{itemize}
+	\item Built internal auditing tool used to parse the codebases of published internal applications for vulnerabilities through the GitHub and Posit Connect APIs
+	\begin{itemize}
+		\item Used to supervise the transition of $50+$ applications to CI via Git-backed deployment
+		\item Leveraged the R abstract syntax tree to extract hardcoded DSNs and calls to unverified data sources
+		\item Implemented an asynchronous and concurrent FIFO audit queue using R Shiny module servers and extended tasks to prevent blocking behavior
+	\end{itemize}
+\end{itemize}
+
+\subsection{Circana, Inc \hfill Chicago, IL}
+\subsubsection{LiquidAI Strategy Intern \hfill 06/2025 -- 08/2025}
+\begin{itemize}
+	\item Structured AI-backed data visualizations and actionable insights from Circana proprietary POS and market data, built with JavaScript, AmCharts4, and native JSON parsing
+	\item Engineered automated visualization pipelines that moved reporting to a 24-hour refresh cadence, reducing manual effort and keeping deliverables current
+\end{itemize}
+
+\subsection{Medpace, Inc \hfill Cincinnati, OH}
+\subsubsection{Informatics Co-Op Intern \hfill 01/2025 -- 05/2025}
+\begin{itemize}
+	\item Implemented Isolation Forest model to identify outlier clinical data; developed interactive web application integrated with a Snowflake database to perform real-time anomaly predictions
+	\item Built non-linear regression models for site startup timelines, improving forecast accuracy by $\approx 18\%$ over legacy methods
+	\item Revamped internal feasibility tool; replaced local spreadsheet system with a database-backed, full-stack application using MS SQL Server and R Shiny in cooperation with analyst
+	\item Scraped and visualized public EudraCT trial data using Python to analyze competing studies
+\end{itemize}
+
+\section{Projects}
+%=================
+\subsubsection{LLM Code Security Benchmark Pipeline \hfill 2026}
+\subsubsection{LeftForTheReader (L4TR) \hfill 2025}
+\begin{itemize}
+	\item LLM chat interface for math using \verb|llama.cpp| and Streamlit; performs RAG using more than 30k proofs/definitions scraped from ProofWiki using BS4 and stored in ChromaDB; deployed on hardened VPS via Docker
+\end{itemize}
+\vspace{-7pt}
+\subsubsection{SkillSync \hfill 2025}
+\begin{itemize}
+	\item Senior project matching resumes to jobs; wrote entire NLP and ML pipeline; utilizes SVM with embedding model features to classify resumes into industries; leverages transformer models for zero-shot NER via GLiNER; CI/CD tests using GitHub Actions
+\end{itemize}
+\vspace{-7pt}
+\subsubsection{Image Compression via Learned Basis Representations \hfill 2024}
+\begin{itemize}
+	\item Implemented DCT/JPEG, PCA, and ICA compression from scratch in Python/NumPy; evaluated RMSE, PSNR, and MSSIM across methods on BSD68 and Kodak datasets; improved PCA compression ratio 4$\times$ via integer quantization with component-wise whitening
+\end{itemize}
+\vspace{-7pt}
+\subsubsection{Causal Structure Preservation in Tabular Synthetic Data Gen. \hfill 2024}
+\begin{itemize}
+	\item Evaluated causal fidelity of TabDDPM, CTGAN, and VAE across 7 datasets using PC, FCI, LiNGAM, and NOTEARS; found statistical quality and causal preservation to be unrelated
+\end{itemize}
+
+\section{Skills}
+%===========================%
+\begin{description}[itemsep=0pt]
+	\item[ML/AI] HuggingFace, vLLM, PyTorch, scikit-learn, SLURM, NumPy, Pandas
+	\item[Software] Python, JS, TS, Java, Flask, SQL, Git, R, R Shiny, Docker, Full-Stack
+\end{description}
+
+\end{document}
