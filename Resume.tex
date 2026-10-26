@@ -3,7 +3,7 @@
 % Link: https://github.com/subidit/rover-resume
 %------------------------
 \documentclass[10pt]{article} % fontsize 10pt/11pt/12pt
-\usepackage[margin=0.5in, a4paper]{geometry}
+\usepackage[top=1cm, left=1.5cm, right=1.5cm, bottom=1cm, a4paper]{geometry}
 \usepackage[T1]{fontenc}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[hidelinks]{hyperref}
@@ -17,16 +17,16 @@
 \setlist[itemize]{noitemsep,left=0pt .. \parindent}
 \pagestyle{empty} % remove page number
 \titlespacing{\section}{0pt}{*1}{*0.5}
-\pdfgentounicode=1
+%\pdfgentounicode=1
 \begin{document}
 \begin{center}
-	\begin{minipage}{0.58\textwidth}
+	\begin{minipage}{0.5\textwidth}
 		{\huge\bfseries
 			Maximilian L. Schulten
 		} \\ \medskip
 		AI/ML Engineer \& Researcher
 	\end{minipage} \hfill
-	\begin{minipage}{0.38\textwidth}
+	\begin{minipage}{0.4\textwidth}
 		\raggedleft
 		Email: maximilian.schulten1@gmail.com \\
 		Mobile: +1 (513) 446-8426 \\
@@ -39,7 +39,7 @@
 \section{Education}
 %=================%
 \subsection{Case Western Reserve University \hfill Cleveland, OH}
-\subsection{\normalfont\itshape M.S./B.S. Computer Science, B.S. Mathematics \hfill 08/2022 -- Present (Exp. Spring '27)}
+\subsection{\normalfont\itshape M.S./B.S. Computer Science, B.S. Mathematics \hfill 08/2022 -- Present (Exp. Summer '27)}
 \begin{itemize}
 	\item Integrated B.S./M.S. Candidate
 	\item Cumulative GPA: 3.91, Dean's High Honor List (all semesters)
@@ -52,11 +52,13 @@
 \subsection{Medpace, Inc \hfill Cincinnati, OH}
 \subsubsection{Clinical Informatics Intern \hfill 05/2026 -- 08/2026}
 \begin{itemize}
-	\item Built an asynchronous R Shiny order portal using the Microsoft Graph REST API, using optimistic UI updates to keep the interface responsive under concurrent load
+	\item Built a print order platform in R Shiny on top of the Microsoft Graph REST API, using optimistic UI updates and async programming to keep the interface responsive under concurrent load
+	\vspace{-2pt}
 	\begin{itemize}
-		\item Served $\approx 50$ orders per week across 200+ daily sessions, available company-wide
+		\item Serves $\approx 50$ orders per week across 200+ daily sessions; available company-wide
 	\end{itemize}
 	\item Built internal auditing tool used to parse the codebases of published internal applications for vulnerabilities through the GitHub and Posit Connect APIs
+	\vspace{-2pt}
 	\begin{itemize}
 		\item Used to supervise the transition of $50+$ applications to CI via Git-backed deployment
 		\item Leveraged the R abstract syntax tree to extract hardcoded DSNs and calls to unverified data sources
@@ -74,7 +76,7 @@
 \subsection{Medpace, Inc \hfill Cincinnati, OH}
 \subsubsection{Informatics Co-Op Intern \hfill 01/2025 -- 05/2025}
 \begin{itemize}
-	\item Implemented Isolation Forest model to identify outlier clinical data; developed interactive web application integrated with a Snowflake database to perform real-time anomaly predictions
+	\item Fitted Implemented Isolation Forest model to identify outlier clinical data; developed interactive web application integrated with a Snowflake database to perform real-time anomaly predictions
 	\item Built non-linear regression models for site startup timelines, improving forecast accuracy by $\approx 18\%$ over legacy methods
 	\item Revamped internal feasibility tool; replaced local spreadsheet system with a database-backed, full-stack application using MS SQL Server and R Shiny in cooperation with analyst
 	\item Scraped and visualized public EudraCT trial data using Python to analyze competing studies
@@ -89,7 +91,7 @@
 \vspace{-7pt}
 \subsubsection{SkillSync \hfill 2026}
 \begin{itemize}
-	\item Senior project matching resumes to jobs; wrote entire NLP and ML pipeline; utilizes SVM with embedding model features to classify resumes into industries; leverages transformer models for zero-shot NER via GLiNER; CI/CD tests using GitHub Actions
+	\item Senior project matching resumes to jobs; wrote NLP and ML pipeline; utilizes SVM with embedding model features to classify resumes into industries; leverages transformer models for zero-shot NER via GLiNER; CI/CD tests using GitHub Actions
 \end{itemize}
 \vspace{-7pt}
 \subsubsection{Image Compression via Learned Basis Representations \hfill 2026}
@@ -105,8 +107,8 @@
 \section{Skills}
 %===========================%
 \begin{description}[itemsep=0pt]
-	\item[ML/AI] HuggingFace, vLLM, PyTorch, scikit-learn, SLURM, NumPy, Pandas
-	\item[Software] Python, JS, TS, Java, Flask, SQL, Git, R, R Shiny, Docker, Full-Stack
+	\item[ML/AI] HuggingFace, vLLM, PyTorch, scikit-learn, SLURM, NumPy, Pandas, TRL
+	\item[Software] Python, TS, Java, Flask, SQL, Git, R, R Shiny, Docker, C
 \end{description}
 
 \end{document}
